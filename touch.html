@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>touch</title>
+     <script src="zepto.min.js"></script> 
+    <script src="touch.js"></script>
+    <style>
+        .box{
+            height: 200px;
+            background: rgb(192,39,45);
+            text-indent: 2em;
+        }
+        .box-0{
+            height: 400px;
+            background: #bce672;
+            display: none;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box"> 
+        <p>是可忍孰不可忍<br/>勿谓言之不预也</p>
+    </div>
+    <div class="box-0"> 
+        <p>你和嘎哈给你好好嘎金额和该和hi个啊该黑嘎欸个hi噶尔个啊咯哈哈看哈<br/>特朗普和金三胖之间的相爱相杀<br/>三胖在记者大会上宣布，朝鲜要在五年之内登上太阳，三胖的一小步，人类的一大步。有记者提问：“太阳这么热，怎么上去？”三胖淡定的回答，“我们晚上再去”。顿时，大厅里响起了雷鸣般的掌声。与此同时，在美国白宫，特朗普正在观看电视直播，听到三胖的豪言壮语，不禁嘲笑道：“傻逼，晚上根本没有太阳。”于是，白宫会客厅响起了更加热烈的掌声</p>
+    </div>
+    <script>
+        // $(".box").attr("index","1");
+        // $(".box").bind("touchstart",function(){
+        //     if($(this).attr("index")==1){
+        //         $(".box-0").css("display","block");
+        //         $(this).attr("index","2");
+        //     }else{
+        //         $(".box-0").css("display","none");
+        //         $(this).attr("index","1");
+        //     }
+        // })
+        // var a = document.getElementById("box");
+        // console.log(a)
+        document.getElementById("box").touch({
+            swipeLeft:function(){
+                alert("left");
+            }
+        });
+    </script>
+</body>
+</html>
